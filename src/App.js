@@ -18,7 +18,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="products" element={<ProductList />} />
-          <Route path="products/1001" element={<ProductDetail />} />
+          <Route path="products/:id" element={<ProductDetail />} /> 
+          {/* :id is a dynamic parameter which we captured to help us display the correct product details */}
           <Route path="contact" element={<Contact />} />
           <Route path="/admin" element={user ? <Admin/> : <Navigate to="/" />} />
         </Routes>
