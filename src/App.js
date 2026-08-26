@@ -6,11 +6,12 @@ import {ProductList} from './components/ProductList';
 import {ProductDetail} from './components/ProductDetail';
 import {Contact} from './components/Contact';
 import{Admin} from './components/Admin';
+import {PageNotFound} from './components/PageNotFound';
 import './App.css';
 
 function App() {
   const user = true; // This is a placeholder for user authentication status. In a real application, this would be determined by your authentication logic.
-  const loggedIn = true; // This is a placeholder for user login status. In a real application, this would be determined by your authentication logic.
+  // const loggedIn = true; // This is a placeholder for user login status. In a real application, this would be determined by your authentication logic.
   return (
     <div className="App">
       <Header/>
@@ -21,7 +22,8 @@ function App() {
           <Route path="products/:id" element={<ProductDetail />} /> 
           {/* :id is a dynamic parameter which we captured to help us display the correct product details */}
           <Route path="contact" element={<Contact />} />
-          <Route path="/admin" element={user ? <Admin/> : <Navigate to="/" />} />
+          <Route path="admin" element={user ? <Admin/> : <PageNotFound /> }/>
+          <Route path="*" element={<PageNotFound title="404 - Page Not Found" />} />
         </Routes>
       </main>
       <Footer/>
