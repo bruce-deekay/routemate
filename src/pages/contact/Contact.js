@@ -12,11 +12,11 @@ export const Contact = () => {
   }
 
   return (
-    <>
+    <main>
       <div className="component">Contact</div>      
       <Outlet />
       {/* This will display the appropriate contact component based on the current URL path (ContactKe, ContactEu, or ContactUs) */}
       <button onClick={handleSubmit}>Submit Form</button>
-    </>
+    </main>
   )
 }

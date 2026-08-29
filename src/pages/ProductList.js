@@ -7,6 +7,8 @@ export const ProductList = () => {
   // console.log(location); // This will log the location object, which contains information about the current URL, including pathname, search, hash, and state.
   // useSearchParams is a hook that allow us to search for a speific query parameter whereaas useLocation is a hook that allow us to get the current location object which contains all the information about the current URL
   return (
-    <div className="component">ProductList</div>
+    <main>
+      <div className="component">ProductList</div>
+    </main>
   )
 }
